@@ -1,27 +1,21 @@
 html,
 body {
     line-height: 1;
-    background: #FFE6D7;
+    background-color: #ffe6d7;
     margin: 0px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans','Arial', Helvetica,  sans-serif;
 }
 
 a,
 li {
     all: unset;
-    cursor: pointer;
-}
-
-[class*="__container"] {
-    max-width: 1165px;
-    margin: 0px auto;
 }
 
 .wrapper {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-image: url(./media/background_consoles.png);
+    background-image: url("./media/background_consoles.png");
     background-size: 100% auto;
 }
 
@@ -30,14 +24,15 @@ li {
     display: flex;
     align-items: center;
     min-height: 100px;
+    max-width: 1165px;
+    margin: 0px auto;
 }
 
-.logo > img{
+.logo__image{
     width: 287px;
     height: 78px;
-}
-.header__logo > img{
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .header__menu {
@@ -56,48 +51,40 @@ li {
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
+    cursor: pointer;
 }
 
 .button {
-    color: #fff;
-    text-align: center;
+    color: #ffffff;
     font-size: 18px;
     font-style: normal;
-    font-weight: 500;
     line-height: 24px;
+    font-weight: 500;
     border-radius: 25px;
-    background: linear-gradient(95deg, #4499D9 17.46%, #7367BE 87.77%);
-    padding: 13px 14px 13px 19px;
+    background: linear-gradient(95deg, #4499d9 17.46%, #7367be 87.77%);
+    padding: 13px 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    cursor: pointer;
 }
-
-/* MAIN CONSOLES */
+.header__button{
+    min-width: 180px;
+}
+/* MAIN CONSOLEdS */
 
 .main {
     flex: 1 1 auto;
 }
 
-.consoles__content > div:after {
-    background: url("./media/background_c0nsoles_2.png") no-repeat scroll 0 0 transparent;
-    opacity: 0.5;
-    bottom: 0;
-    content: "";
-    left: 35%;
-    position: absolute;
-    right: 0;
-    top: 68%;
+.main__consoles{
+    background-image: url("./media/background_consoles_2.png"), url("./media/background_c0nsoles_2.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 200px right -100px, 400px 500px;
 }
-
-.consoles__content > div:before {
-    background: url("./media/background_consoles_2.png") no-repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    left: 80%;
-    position: absolute;
-    right: 0;
-    top: 39%;
-}
-
 .content__container {
+    max-width: 1165px;
+    margin: 0px auto;
     display: flex;
     align-items: center;
     padding-bottom: 65px;
@@ -117,25 +104,31 @@ li {
     display: flex;
     align-items: center;
 }
+.content__title--background{
+    background-image: url("./media/Arrow.png");
+    background-repeat: no-repeat;
+    background-position: 215px -2px;
+}
 
 .content__arrow {
     margin-left: 30px;
 }
 
 .content__name {
-    color: #EB8382;
+    color: #eb8382;
     font-size: 68px;
     font-style: normal;
     font-weight: 700;
     line-height: 75px;
     padding: 26px 0 31px;
+    margin:0;
 }
 
 .content__image{
     width: 640px;
 }
 
-.content__name > span {
+.content__name--blue {
     color: #446381;
     font-size: 58px;
     font-style: normal;
@@ -145,7 +138,7 @@ li {
 
 .content__information {
     width: 535px;
-    color: #826F8C;
+    color: #826f8c;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -153,12 +146,13 @@ li {
 }
 
 .content__button {
+    display: inline-block;
     width: 207px;
     margin-top: 26px;
 }
 
 /* GLASSES */
-.glasses__content > div{
+.main__series{
     flex-direction: row-reverse;
     gap: 80px;
     background-image: url("./media/background_glasses_1.png");
@@ -167,20 +161,25 @@ li {
     padding: 50px 0 70px;
 }
 
-.glasses__content {
-    background: #FFE6D7;
+.main__glasses {
+    background-color: #ffe6d7;
 }
 
-.glasses__content {
+.main__glasses {
     background-image: url("./media/1111.png");
     background-repeat: no-repeat;
     background-position: 105% 105%;
 }
 
-.content__button-container {
-    display: flex;
+.content__text--arrowGlasses{
+    background-image: url("./media/next_step.png");
+    background-repeat: no-repeat;
+    background-position: 250px 350px;}
+.content__text--arrowXbox{
+    background-image: url("./media/next_step.png");
+    background-repeat: no-repeat;
+    background-position: 400px 350px;
 }
-
 .glasses__next {
     width: 35px;
     height: 25px;
@@ -194,12 +193,12 @@ li {
 }
 
 /* XBOX */
-.xbox__content {
-    background: url(./media/xbox_background.png);
+.main__xbox {
+    background-image: url("./media/xbox_background.png");
     background-size: 100% auto;
 }
 
-.xbox__content > div{
+.main__new{
     gap: 80px;
 }
 
@@ -209,17 +208,19 @@ li {
     border-radius: 20px;
     box-shadow: 0px 20px 50px 0px rgba(132, 148, 205, 0.08);
     height: 566px;
-    background: #FBDACF;
+    background-color: #fbdacf;
 }
-.card_class_standart{
-    background: url(./media/baclground_card.png), linear-gradient(180deg, #446381 0%, #826F8C 100%);
-        height: 606px;
-        background-repeat: no-repeat;
-        background-position: left bottom;
+.card__standart{
+    background-image: url("./media/baclground_card.png"), linear-gradient(180deg, #446381 0%, #826F8C 100%);
+    height: 606px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
 
 }
 
 .price__container{
+    max-width: 1165px;
+    margin: 0px auto;   
     padding: 50px 0 70px;
     display: flex;
     align-items: center;
@@ -228,7 +229,6 @@ li {
 
 .price__text{
     color: #446381;
-    font-family: Josefin Sans;
     font-size: 23px;
     font-style: normal;
     font-weight: 500;
@@ -236,8 +236,7 @@ li {
 }
 
 .price__title{
-    color: #EB8382;
-    font-family: Josefin Sans;
+    color: #eb8382;
     font-size: 68px;
     font-style: normal;
     font-weight: 700;
@@ -252,7 +251,7 @@ li {
 }
 
 .price{
-    background: #FFE6D7;
+    background-color: #ffe6d7;
     border-bottom: 2px solid #cdc7d1;
 }
 
@@ -265,12 +264,12 @@ li {
     margin: 35px 0 32px 43px;
 }
 
-.card__name  > img{
+.card__logo{
     margin-left: 100px;
 }
 
 .card__price{
-    color: #EB8382;
+    color: #eb8382;
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
@@ -279,8 +278,8 @@ li {
 
 }
 
-.card__price > span {
-    color: #EB8382;
+.card__hour{
+    color: #eb8382;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -290,7 +289,7 @@ li {
 .card__item{
     display: flex;
     align-items: center;
-    color: #826F8C;
+    color: #826f8c;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -310,12 +309,12 @@ li {
 }
 
 .white{
-    color: white;
+    color: #ffffff
 }
 
 /* FOOTER */
 .footer{
-    background-color: rgb(255, 230, 215);
+    background-color: #ffe6d7;
     height: 108px;
     display: flex;
     align-items: center;
@@ -323,8 +322,7 @@ li {
 }
 
 .footer__copiright{
-    color: #826F8C;
-    font-family: Josefin Sans;
+    color: #826f8c;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -336,4 +334,15 @@ li {
     margin-bottom: 10px;
     width: 238px;
     height: 65px;
+}
+
+.links__facebook,
+.links__twitter,
+.links__instagram{
+    width: 40px;
+    height: 40px;
+}
+.links__link{
+    margin-right: 15px;
+    cursor: pointer;
 }
