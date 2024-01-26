@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/style.min.css" media="screen" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -15,84 +15,94 @@
     <div class="wrapper">
         <header class="header">
             <div class="header__container">
-                <a href="" class="header__logo logo"><img class="logo__image" src="./media/logo.png" alt="logo"></a>
+                <a href="" class="header__logo"><img class="header__imageLogo" src="img/logo.png" alt="logo"></a>
                 <nav class="header__menu menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="" class="menu__link">Home</a>
+                            <a href="#home" class="menu__link">Home</a>
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">About Us</a>		
+                            <a href="#aboutUs" class="menu__link">About Us</a>
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">Prices</a>
+                            <a href="#rules" class="menu__link">Prices</a>
                         </li>
                         <li class="menu__item">
-                            <a href="" class="menu__link">Rules</a>
+                            <a href="#prices" class="menu__link">Rules</a>
                         </li>
                     </ul>
                 </nav>
-                <div class="header__button">
-                    <a href="" class="button">Get Started Now</a>
+                <div class="header__autorizationButtons">
+                    <button class="header__registerButton">Register</button>
+                    /
+                    <button class="header__loginButton">Login</button>
+                </div>
+                <div class="header__userInfo hidden">
+                    <img src="img/person.svg" alt="" class="header__userImage">
+                    <div class="header__userLogin"></div>
+                    <div class="header__logoutButton">
+                        <button class="button">Logout</button>
+                    </div>
                 </div>
             </div>
         </header>
         <main class="main">
-            <section class="main__consoles content">    
+            <section class="main__consoles content" id="home">
                 <div class="content__container">
                     <div class="content__text">
-                        <div class="content__title content__title--background">Gaming Consoles</div>
-                        <h1 class="content__name">Try It, Rent It, <span class="content__name--blue">Save $50!</span></h1>
+                        <div class="content__title content__arrowConsoles">Gaming Consoles</div>
+                        <h1 class="content__name">Try It, Rent It, <span class="content__name__blue">Save $50!</span>
+                        </h1>
                         <div class="content__information">It is a long established fact that a reader will be distracted
                             by the readable content of a page when looking at its layout. The point of using Lorem Ipsum
                             is that it has a more-or-less normal distribution of letters as opposed.</div>
                         <div class="content__button">
-                            <a href="" class="button">Get Started Now</a>
+                            <a href="#prices" class="button">Get Started Now</a>
                         </div>
                     </div>
                     <div class="content__image">
-                        <img src="./media/consoles.png" alt="consoles">
+                        <img src="img/consoles.png" alt="consoles">
                     </div>
                 </div>
             </section>
 
-            <section class="main__glasses content">
+            <section class="main__glasses content" id="aboutUs">
                 <div class="content__container main__series">
-                    <div class="content__text content__text--arrowGlasses">
+                    <div class="content__text content__arrowGlasses">
                         <div class="content__title">About VR Glasses</div>
                         <h1 class="content__name">The New VR Glasses
                             Series</h1>
                         <div class="content__information">It is a long established fact that a reader will be distracted
                             by the readable content of a page when looking at its layout. The point of using Lorem Ipsum
                             is that it has a more-or-less normal distribution of letters as opposed.</div>
-                            <div class="content__button ">
-                                <a href="" class="button">Get Started Now</a>
-                            </div>
+                        <div class="content__button">
+                            <a href="#prices" class="button">Get Started Now</a>
+                        </div>
                     </div>
                     <div class="content__image">
-                        <img src="./media/glasses.png" alt="consoles">
+                        <img src="img/glasses.png" alt="consoles">
                     </div>
                 </div>
             </section>
-            <section class="main__xbox content">
+            <section class="main__xbox content" id="rules">
                 <div class="content__container main__new">
-                    <div class="content__text content__text--arrowXbox">
+                    <div class="content__text content__arrowXbox">
                         <div class="content__title">About XBOX, PS</div>
                         <h1 class="content__name">The New Xbox, Ps
                             Series</h1>
                         <div class="content__information">It is a long established fact that a reader will be distracted
                             by the readable content of a page when looking at its layout. The point of using Lorem Ipsum
                             is that it has a more-or-less normal distribution of letters as opposed.</div>
-                            <div class="content__button">
-                                <a href="" class="button">Get Started Now</a>
-                            </div>
+                        <div class="content__button">
+                            <a href="#prices" class="button">Get Started Now</a>
                         </div>
+                    </div>
                     <div class="content__image">
-                        <img src="./media/xbox.png" alt="consoles">
+                        <img src="img/xbox.png" alt="consoles">
                     </div>
                 </div>
             </section>
-            <section class="price">
+            <section class="price" id="prices">
                 <div class="price__container">
                     <div class="price__text">Our Pricing</div>
                     <h1 class="price__title">Choose Your Plan</h1>
@@ -101,53 +111,53 @@
                             <div class="card__name">Basic</div>
                             <div class="card__price">$50.00 <span class="card__hour">/ Per Hour</span></div>
                             <ul class="card__services">
-                                <li class="card__item"><img src="./media/checkMark.png" alt="" class="card__image">
+                                <li class="card__item"><img src="img/checkMark.png" alt="" class="card__image">
                                     <div class="card__text">10 users included</div>
                                 </li>
-                                <li class="card__item"><img src="./media/checkMark.png" alt="" class="card__image">
+                                <li class="card__item"><img src="img/checkMark.png" alt="" class="card__image">
                                     <div class="card__text">2 GB of storage</div>
                                 </li>
-                                <li class="card__item"><img src="./media/checkMark.png" alt="" class="card__image">
+                                <li class="card__item"><img src="img/checkMark.png" alt="" class="card__image">
                                     <div class="card__text">Email support</div>
                                 </li>
-                                <li class="card__item"><img src="./media/checkMark.png" alt="" class="card__image">
+                                <li class="card__item"><img src="img/checkMark.png" alt="" class="card__image">
                                     <div class="card__text">Help center access</div>
                                 </li>
-                                <li class="card__item"><img src="./media/checkMark.png" alt="" class="card__image">
+                                <li class="card__item"><img src="img/checkMark.png" alt="" class="card__image">
                                     <div class="card__text">10 users included</div>
                                 </li>
                                 <div class="card__button">
-                                    <a href="" class="button">Select This Plan</a>
+                                    <button class="button card__buyButton" id="Basic">Select This Plan</button>
                                 </div>
                             </ul>
                         </div>
                         <div class="card card__standart">
-                            <div class="card__name white">Standart <img class="card__logo" src="./media/price_checkMark.png"
+                            <div class="card__name white">Standart <img class="card__logo" src="img/price_checkMark.png"
                                     alt="checkMark"></div>
                             <div class="card__price">$95.00 <span class="card__hour">/ Per Hour</span></div>
                             <ul class="card__services">
-                                <li class="card__item white"><img src="./media/checkMark_white.png" alt=""
+                                <li class="card__item white"><img src="img/checkMark_white.png" alt=""
                                         class="card__image">
                                     <div class="card__text ">10 users included</div>
                                 </li>
-                                <li class="card__item white"><img src="./media/checkMark_white.png" alt=""
+                                <li class="card__item white"><img src="img/checkMark_white.png" alt=""
                                         class="card__image">
                                     <div class="card__text">2 GB of storage</div>
                                 </li>
-                                <li class="card__item white"><img src="./media/checkMark_white.png" alt=""
+                                <li class="card__item white"><img src="img/checkMark_white.png" alt=""
                                         class="card__image">
                                     <div class="card__text">Email support</div>
                                 </li>
-                                <li class="card__item white"><img src="./media/checkMark_white.png" alt=""
+                                <li class="card__item white"><img src="img/checkMark_white.png" alt=""
                                         class="card__image">
                                     <div class="card__text">Help center access</div>
                                 </li>
-                                <li class="card__item white"><img src="./media/checkMark_white.png" alt=""
+                                <li class="card__item white"><img src="img/checkMark_white.png" alt=""
                                         class="card__image">
                                     <div class="card__text">10 users included</div>
                                 </li>
                                 <div class="card__button">
-                                    <a href="" class="button">Select This Plan</a>
+                                    <button class="button card__buyButton" id="Standart">Select This Plan</button>
                                 </div>
                             </ul>
                         </div>
@@ -155,23 +165,23 @@
                             <div class="card__name">Premium</div>
                             <div class="card__price">$120.00 <span class="card__hour">/ Per Hour</span></div>
                             <ul class="card__services">
-                                <li class="card__item"><img src="./media/checkMark.png" alt="" class="card__image">
+                                <li class="card__item"><img src="img/checkMark.png" alt="" class="card__image">
                                     <div class="card__text">10 users included</div>
                                 </li>
-                                <li class="card__item"><img src="./media/checkMark.png" alt="" class="card__image">
+                                <li class="card__item"><img src="img/checkMark.png" alt="" class="card__image">
                                     <div class="card__text">2 GB of storage</div>
                                 </li>
-                                <li class="card__item"><img src="./media/checkMark.png" alt="" class="card__image">
+                                <li class="card__item"><img src="img/checkMark.png" alt="" class="card__image">
                                     <div class="card__text">Email support</div>
                                 </li>
-                                <li class="card__item"><img src="./media/checkMark.png" alt="" class="card__image">
+                                <li class="card__item"><img src="img/checkMark.png" alt="" class="card__image">
                                     <div class="card__text">Help center access</div>
                                 </li>
-                                <li class="card__item"><img src="./media/checkMark.png" alt="" class="card__image">
+                                <li class="card__item"><img src="img/checkMark.png" alt="" class="card__image">
                                     <div class="card__text">10 users included</div>
                                 </li>
                                 <div class="card__button">
-                                    <a href="" class="button">Select This Plan</a>
+                                    <button class="button card__buyButton" id="Premium">Select This Plan</button>
                                 </div>
                             </ul>
                         </div>
@@ -180,18 +190,25 @@
             </section>
         </main>
         <footer class="footer">
-            <a href="" class="footer__logo logo"><img src="./media/logo.png" alt="logo"></a>
+            <a href="" class="footer__logo"><img src="img/logo.png" class="footer__imageLogo" alt="logo"></a>
             <div class="footer__copiright">Copyright © 2022 HEALAS.LT. All Rights Reserved.</div>
             <div class="footer__links">
                 <ul class="links">
-                    <li class="links__link"><a href="sample.html"><img class="links__facebook" src="./media/facebook.svg" alt="facebook"></a></li>
-                    <li class="links__link"><a  href="sample.html"><img class="links__twitter"  src="./media/twitter.svg"  alt="twiter"></a></li>
-                    <li class="links__link"><a  href="sample.html"><img class="links__instagram" src="./media/instagram.svg" alt="inst"></a></li>
+                    <li class="links__link"><a href="https://ru-ru.facebook.com/"><img class="links__facebook"
+                                src="img/facebook.svg" alt="facebook"></a></li>
+                    <li class="links__link"><a href="https://twitter.com/TwitterMENA"><img class="links__twitter"
+                                src="img/twitter.svg" alt="twiter"></a></li>
+                    <li class="links__link"><a href="https://www.instagram.com/"><img class="links__instagram"
+                                src="img/instagram.svg" alt="inst"></a></li>
                 </ul>
             </div>
-
         </footer>
+        @@include('./html/registrationModal.html')
+        @@include('./html/buyModal.html')
+        @@include('./html/loginModal.html')
     </div>
+    <script src="js/app.min.js"></script>
+
 </body>
 
 </html>

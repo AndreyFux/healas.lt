@@ -1,0 +1,600 @@
+html,
+body {
+    line-height: 1;
+    background-color: #ffe6d7;
+    margin: 0px;
+    font-family: 'Josefin Sans', 'Arial', Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a,
+li {
+    all: unset;
+    cursor: pointer;
+}
+
+.style {
+    text-align: center;
+}
+
+.status {
+    margin: 0 auto 15px;
+    color: tomato;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(5px);
+}
+
+dialog {
+    box-shadow: 0 0 67px 1px #00000052;
+}
+
+dialog[open] {
+    animation: myFadeIn 0.7s ease normal;
+
+}
+
+@keyframes myFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/background_consoles.png");
+    background-size: 100% auto;
+}
+
+.input {
+    border: 1px solid #446381;
+    border-radius: 6px;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #446381;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 300;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+}
+
+.input:focus {
+    border: 1px solid #4499d9 !important;
+    outline: none;
+}
+
+/* HEADER */
+.header__userInfo {
+    display: flex;
+    align-items: center;
+}
+
+.header__userLogin {
+    color: #eb8382;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: transparent;
+    border: none;
+}
+
+.header__logoutButton {
+    margin-left: 10px;
+}
+
+.header__logo {
+    margin-bottom: 10px;
+}
+
+.header__imageLogo {
+    height: 78px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.header__userImage {
+    width: 25px;
+    margin-bottom: 5px;
+}
+
+.header__autorizationButtons {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.header__autorizationButtons,
+.header__registerButton,
+.header__loginButton {
+    color: #eb8382;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: transparent;
+    border: none;
+    font-family: 'Josefin Sans', 'Arial', Helvetica, sans-serif;
+}
+
+.header__registerButton,
+.header__loginButton {
+    cursor: pointer;
+    color: #446381;
+
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    max-width: 1165px;
+    margin: 0px auto;
+}
+
+.header__menu {
+    flex: 1 1 auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__link {
+    margin-right: 50px;
+    color: #446381;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.button {
+    color: #ffffff;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 24px;
+    font-weight: 500;
+    border-radius: 25px;
+    background: linear-gradient(95deg, #4499d9 17.46%, #7367be 87.77%);
+    padding: 13px 30px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    border: none;
+    font-family: 'Josefin Sans';
+}
+
+/* MAIN CONSOLEdS */
+
+.main {
+    flex: 1 1 auto;
+}
+
+.main__consoles {
+    background-image: url("../img/background_consoles_2.png"), url("../img/background_consoles_3.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 200px right 100px, 600px 500px;
+}
+
+.content__container {
+    max-width: 1165px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    padding-bottom: 65px;
+    padding-top: 10px;
+}
+
+.content__text {
+    min-width: 500px;
+}
+
+.content__title {
+    color: #446381;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.content__arrowConsoles {
+    background-image: url("../img/Arrow.png");
+    background-repeat: no-repeat;
+    background-position: 215px -2px;
+}
+
+.content__arrow {
+    margin-left: 30px;
+}
+
+.content__name {
+    color: #eb8382;
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 75px;
+    padding: 26px 0 31px;
+    margin: 0;
+}
+
+.content__name__blue {
+    color: #446381;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 75px;
+}
+
+.content__information {
+    width: 535px;
+    color: #826f8c;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.content__button {
+    display: inline-block;
+    margin-top: 26px;
+}
+
+/* GLASSES */
+.main__series {
+    flex-direction: row-reverse;
+    gap: 80px;
+    background-image: url("../img/background_glasses_1.png");
+    background-repeat: no-repeat;
+    background-position: 100% 105%;
+    padding: 50px 0 70px;
+}
+
+.main__glasses {
+    background-color: #ffe6d7;
+}
+
+.main__glasses {
+    background-image: url("../img/background_glasses_2.png");
+    background-repeat: no-repeat;
+    background-position: 105% 105%;
+}
+
+.content__arrowGlasses {
+    background-image: url("../img/next_step.png");
+    background-repeat: no-repeat;
+    background-position: 250px 350px;
+}
+
+.content__arrowXbox {
+    background-image: url("../img/next_step.png");
+    background-repeat: no-repeat;
+    background-position: 400px 350px;
+}
+
+.glasses__next {
+    width: 35px;
+    height: 25px;
+    margin-left: 30px;
+}
+
+.xbox__next {
+    width: 32px;
+    height: 18px;
+    margin-left: 100px;
+}
+
+/* XBOX */
+.main__xbox {
+    background-image: url("../img/xbox_background.png");
+    background-size: 100% auto;
+}
+
+.main__new {
+    gap: 80px;
+}
+
+/* PRICE */
+.card {
+    width: 360px;
+    border-radius: 20px;
+    box-shadow: 0px 20px 50px 0px rgba(132, 148, 205, 0.08);
+    height: 566px;
+    background-color: #fbdacf;
+}
+
+.card__standart {
+    background-image: url("../img/baclground_card.png"), linear-gradient(180deg, #446381 0%, #826F8C 100%);
+    height: 606px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+}
+
+.price__container {
+    max-width: 1165px;
+    margin: 0px auto;
+    padding: 50px 0 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.price__text {
+    color: #446381;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.price__title {
+    color: #eb8382;
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 75px;
+    margin: 23px 0 65px;
+}
+
+.price__cards {
+    display: flex;
+    gap: 42px;
+    align-items: center;
+}
+
+.price {
+    background-color: #ffe6d7;
+    border-bottom: 2px solid #cdc7d1;
+}
+
+.card__name {
+    color: #446381;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 35px 0 32px 43px;
+}
+
+.card__logo {
+    margin-left: 100px;
+}
+
+.card__price {
+    color: #eb8382;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 46px;
+
+}
+
+.card__hour {
+    color: #eb8382;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.card__item {
+    display: flex;
+    align-items: center;
+    color: #826f8c;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    margin: 35px 0 0 49px
+}
+
+.card__image {
+    height: 9px;
+    width: 13px;
+    margin-right: 13px;
+}
+
+.card__button {
+    margin: 30px 0 0 45px;
+}
+
+.white {
+    color: #ffffff
+}
+
+/* FOOTER */
+.footer {
+    background-color: #ffe6d7;
+    height: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__copiright {
+    color: #826f8c;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 0 15%;
+}
+
+.footer__logo {
+    margin-bottom: 10px;
+}
+
+.footer__imageLogo {
+    height: 65px;
+}
+
+.links__facebook,
+.links__twitter,
+.links__instagram {
+    width: 40px;
+    height: 40px;
+}
+
+.links__link {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.popup {
+    padding: 0px;
+    border: 0px;
+    border-radius: 10px;
+
+}
+
+.popup__body {
+    background-color: #ffe6d7;
+    padding: 0px;
+}
+
+.popup__close {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    cursor: pointer;
+}
+
+.popup__exitCross {
+    width: 30px;
+}
+
+.popup__title {
+    text-align: center;
+    color: #eb8382;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 66px;
+    padding: 10px 20px 0;
+}
+
+.autorization {
+    display: flex;
+    flex-direction: column;
+}
+
+.autorization__email,
+.autorization__personal,
+.autorization__login,
+.autorization__password {
+    margin: 5px 35px;
+}
+
+.autorization__text {
+    color: #446381;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    width: 184px;
+    margin: 0 0 2px 3px;
+}
+
+.autorization__agree {
+    color: #446381;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    margin: 0 10px 0 3px;
+}
+
+.autorization__personal {
+    display: flex;
+}
+
+.autorization__button {
+    display: flex;
+    margin: 10px auto 15px;
+}
+
+.popup__warning {
+    font-size: 22px;
+    line-height: 32px;
+    padding: 15px 20px 0;
+    max-width: 250px;
+}
+
+.registration__button {
+    display: flex;
+    margin: 20px auto 15px;
+}
+
+
+#email,
+#login,
+#password {
+    background-color: transparent;
+    border: 1px solid #9999ba;
+    border-radius: 5px;
+}
+
+/* POPUP BUY */
+
+.popup__information {
+    padding: 0 40px;
+
+}
+
+.popup__element {
+    display: flex;
+
+    color: #826f8c;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 65px;
+}
+
+.popup__text {
+    width: 174px;
+    margin-right: 10px;
+    color: #446381;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 65px;
+
+}
+
+.popup__confirmation {
+    width: 180px;
+    margin: 15px auto 0;
+    padding-bottom: 15px;
+}
+
+.popup__to-registration {
+    width: 180px;
+    margin: 10px auto 0;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,30 @@
+<dialog class="popup popup-register">
+    <div class="popup__body">
+        <div class="popup__content">
+            <button class="popup__close"><img src="img/exir-cross.svg" alt="cross" class="popup__exitCross"></button>
+            <div class="popup__title">Registration</div>
+            <form class="autorization" action="/vr-frontend/" method="POST">
+                <label class="autorization__email">
+                    <span class="autorization__text">email </span>
+                    <input class="input" type="email" name="email" id="email" value="123123@sad" required autofocus>
+                </label>
+                <label class="autorization__login">
+                    <span class="autorization__text">login</span>
+                    <input class="input" type="text" name="login" id="login" value="Vadim" required autofocus>
+                </label>
+                <label class="autorization__password">
+                    <span class="autorization__text">password</span>
+                    <input class="input" type="password" name="password" id="password" value="123123@sad" required>
+                </label>
+                <label class="autorization__personal">
+                    <input type="checkbox" name="personal-memory" id="personal-memory" value="1">
+
+                    <span class="autorization__agree">I agree to the processing of personal data</span>
+                </label>
+                <div class="autorization__button">
+                    <button class="button">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</dialog>
